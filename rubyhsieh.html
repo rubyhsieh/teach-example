@@ -17,10 +17,567 @@
         <!-- 瀏覽器上的 tab 的縮圖 -->
         <link href="practice.jpg"  rel="shortcut icon" />
         
-        </head>
-<body>
-        <h1>
-            我作業好多 考試好多 昨天四點半睡 今天還沒吃午餐 只吃了晚餐 還吃得很趕肚子好痛 還好明天就能回家了 
-        </h1>
-    </body>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #fff;
+        }
+
+        header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        header>h1 {
+            margin-top: 11px;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.32;
+        }
+
+        header>table {
+            width: 100%;
+        }
+
+        header,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto
+        }
+
+        article {
+            color: #2d2d2d;
+        }
+
+        article>header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        article>p,
+        article>h2,
+        article>blockquote,
+        article>ul,
+        article figcaption,
+        article>div,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        article>p,
+        article>blockquote {
+            font-size: 18px;
+            line-height: 2.0;
+            letter-spacing: 0.9px;
+            margin-top: 40px;
+        }
+
+        article>blockquote {
+            padding-left: 21px;
+            color: #6d6d6d;
+            border-left: 1px solid #6d6d6d;
+        }
+
+        article figcaption {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.8px;
+            color: #6d6d6d;
+            margin-top: 15px;
+        }
+
+        article>h2 {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1.1px;
+            line-height: 1.64;
+            margin-top: 40px;
+        }
+
+        @media screen and (min-width:1024px) {
+            header {
+                width: 900px;
+            }
+            article,
+            article>header {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            header {
+                width: 678px
+            }
+            article,
+            article>header {
+                max-width: 678px;
+                margin: 0 auto;
+            }
+        }
+
+        .authors {
+            margin-right: 30px;
+            font-size: 15px;
+            line-height: 2.25;
+        }
+
+        a {
+            color: #2d2d2d;
+            text-decoration: none;
+            border-bottom: 1px solid #c71b0a;
+        }
+
+        article>figure {
+            margin: 0;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>figure {
+                width: 678px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>figure {
+                width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .float-right {
+                float: right;
+                width: 360px;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #F1F1F1;
+        }
+
+        article>ul {
+            list-style-type: none;
+            padding-left: 0;
+            width: 100%;
+        }
+
+        footer {
+            background-color: #bfbfbf;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .header {
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 25px;
+            background-color: #e1e1e1
+        }
+
+        .menu {
+            width: 22px;
+            height: 22px;
+            background-color: #e1e1e1;
+        }
+
+        .introduction {
+            font-size: 22px;
+            line-height: 1.82;
+            letter-spacing: 1.6px;
+            text-align: justify;
+            margin-top: 30px;
+        }
+
+        .related-text {
+            font-size: 16px;
+            line-height: 2.25;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .related-items {
+            margin-bottom: 60px;
+        }
+
+        .related-item {
+            background-color: #e1e1e1;
+            margin-top: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .related-item>img {
+            width: 20%;
+            vertical-align: middle;
+        }
+
+        .related-item>div {
+            display: inline-block;
+            width: 70%;
+            padding-left: 20px;
+            vertical-align: middle;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #bfbfbf;
+            min-height: 300px;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .footer-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #777;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            color: #777;
+        }
+
+        .flex-footer {
+            display: flex;
+            justify-content: space-around;
+            max-width: 529px;
+            margin: 0 auto;
+            padding-top: 65px;
+            flex-wrap: wrap
+        }
+
+        .flex-footer>div {
+            min-width: 114px;
+            margin-bottom: 48px
+        }
+
+        @media screen and (max-width:768px) {
+            .flex-footer {
+                width: 228px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header,
+            article>ul {
+                width: 550px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header {
+                max-width: 756px;
+            }
+            article>ul {
+                width: 700px;
+            }
+        }
+    </style>
+
+</head>
+<!--
+ .related-item>div:first-child {
+            display: table-cell;
+            width: 80px;
+            height: 80px;
+            background-color: papayawhip;
+        }
+        .related-item>div:last-child {
+            display: table-cell;
+            padding-left: 20px;
+            vertical-align: middle;
+        }
+-->
+
+<body style="font-family: Microsoft JhengHei, " Noto Sans TC ", "PingFang TC ", "Apple LiGothic Medium ", Roboto, "Lucida
+    Grande ", "Lucida Sans Unicode ", sans-serif;
+background-color: #fff">
+
+
+    <header class="header">
+        <table style="width:100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="logo"></div>
+                    </td>
+                    <td style="width:22px">
+                        <div class="menu"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+    <article>
+        <header>
+            <!-- 頭標
+                <span>教育</span>
+            -->
+            <h1 style="margin-top: 30px">紅毯前的幕後工作者　促幸福產業再升級</h1>
+        </header>
+        <div style="margin-bottom:15px">
+            <span class="authors">專題記者／
+                <b>
+                    <a href="http://www.unews.nccu.edu.tw/?s=%E9%99%B3%E6%A3%9F+%E5%BC%B5%E7%8E%9F%E6%A6%95+%E6%9D%8E%E6%98%B6%E6%AF%85+%E6%AF%9B%E5%87%B1%E6%81%A9"
+                        target="_blank">林宸佑、劉芳妤、謝羽蓁、謝佩如</a>
+                </b>
+            </span>
+
+        </div>
+        <figure style="margin-top: 20px; width: 100% ">
+            <img src="photo01.jpg" alt="leading image of this article" width="100%" />
+        </figure>
+        <p class="introduction">婚禮進行曲響起，新人步上紅毯，準備和另一半廝守到永遠。但根據內政部結婚登記對數統計，2017年約有13萬8000對新人，相較於2011年減少約16%，創七年來新低。在新人對數減少情況下，台灣的婚禮幸福產業該如何轉型，度過這波「少新人化」的浪潮呢？
+        </p>
+       
+        <h2 class="title">1 /婚禮瑣事多 婚顧來處理</h2>
+        <p>
+            微塔於2005年結婚，當時選擇自辦婚禮，拍婚紗、訂喜餅及餐廳、訂婚及結婚所需的禮品和物品等婚俗都得自行處理。「真心覺得想結婚的人，如果沒錢或怕麻煩者，可以去公證就好了」，微塔談起傳統婚禮的籌備過程，只能以「累」字來形容。微塔建議，新人若想有場浪漫婚禮，卻又無法抽空籌備，可以考慮交由婚禮顧問公司安排。</p>
+        <p style="margin-bottom:40px;">
+            2015年結婚的Vicky起初也打算自辦婚禮，但在拍攝婚紗途中，遇見婚顧公司人員，Vicky考量夫妻因工作難以有時間籌辦，再加上不熟悉婚俗，最後決定交由婚顧公司籌備婚禮。Vicky分享，婚顧公司協助他們從迎娶、訂婚、拍婚紗到婚禮各項流程設計，「找婚顧對我來講方便很多。」
+
+
+        </p>
+        <a href="https://buya7mv7tppktwd2to6drw-on.drv.tw/webPage/" target="_blank">
+            <figure>
+                <img src="chart01.jpg" alt="leading image of this article" width="100%" />
+            </figure>
+        </a>
+        <p style="margin-top:45px">以基隆市為例，已連2年沒有甄聘國中正式教師，基隆市立暖暖高級中學校長甘邵文表示，因現在控管教師員額，只能招考代理教師。苗栗縣立西湖國中代理教師唐嘉聰也指出，目前改聘代理教師已成為主流，「去年學校調走一位數學正式老師，後來就是聘代理的了。」
+        </p>
+        <p style="margin-bottom: 45px">
+            因此，不同於上述因少子化而不斷減少的數據，近年代理教師可謂逆勢上揚。教育部從96學年度開始蒐集代理教師數據，當年度公立國中小長期代理教師數共計8613人，而後到103學年度時人數創歷史新高，已一路飆升至約18000人。後兩年代理教師總數雖微幅下降，然而是因教學現場所需員額降低所致，代理教師佔公立教師總數比率仍逐年上升，105學年度已增至約10%，其中連江縣更達到近20%。
+        </p>
+        <a href="https://hsu-chen.github.io/vismap/" target="_blank">
+            <figure>
+                <img src="chart02.jpg" alt="leading image of this article" width="100%" />
+            </figure>
+        </a>
+        <h2 style="margin-top:30px">數字上升的秘密　控管與超額教師</h2>
+        <p style="margin-top:20px">
+            代理教師制度存在已久，原為正式教師因故請長假或不在職時，由代理教師填補其留下的課務。在少子化的趨勢下，為避免教師需求量下降過快，產生超額教師問題，代理教師的雇用彈性，便成為控管教師額度的一大利器。
+        </p>
+        <p>
+            「超額教師很棘手、很麻煩。」宋慶瑋坦言，校方在處理超額教師的立場上頗為難為，不僅需決定誰才是超額人選，後續還得負責輔導遷調或介聘到其他職位。然而鄰近學校不見得剛好有缺額，超額教師若是無法成功轉職，雖可依《教師法》第15條予以資遣，但面對高額的遣散經費，校方多數會選擇盡力輔導就業。
+        </p>
+        <p>
+            不同於正式教師有工作權的保障，代理教師「處理」起來相對容易。唐嘉聰表示，根據學區內的國小學童數統計，西湖國中後年可能就得面對減班命運。依照教育部員額編制準則，國中班級數每減少1班，教師員額數就會減少2人，「減班一定是先砍代理老師，不可能動到正式教師。」他補充，因代理教師是一年一聘，如果學校不開缺就只好離開，「沒有辦法，這是大家都心知肚明的遊戲規則。」
+        </p>
+        <!--  抽言
+           <blockquote>
+            讓打者揮棒跌倒的投手叫摳大；跌倒後再爬起來的球隊叫傳院。＃回家路遙遠＃傳院我罩的
+        </blockquote>
+    
+        <figure>
+            <img src="coda03.jpg" alt="leading image of this article" width="100%" />
+        </figure>
+-->
+        <h2 style="margin-top:30px">快速變動的大環境　不穩定的代理身分</h2>
+
+        <p>
+            「有家長直接跑來校長室叫我留人，但沒缺額真的沒辦法啊！」宋慶瑋舉例，曾有位代理教師非常優秀，擔任班導師很得學生與家長的喜愛，然而第三年時，因為缺額減少，再不得已還是無法續聘，接手的正式教師反倒表現得沒有如此出色。「為了爭取續聘的機會，代理教師常常表現的比正式教師認真。」宋慶瑋感嘆，遇到這種情況，能做的只剩代理教師到他校應徵時，幫忙美言幾句。
+        </p>
+
+        <p>
+            「待久當然會有感情，但時間到了就是該離開的時候。」唐嘉聰表示，當初因緣際會來到苗栗教書，即使因減班得要離開也是種緣分，能留在同一間學校這麼多年已經算是幸運，「有的代理老師很辛苦，一年換一個學校，像浮萍沒有根。」國中國文代理教師「小君」（化名）曾陸續任教於北部三縣市四所學校，其中一間學校甚至只待了一學期。
+        </p>
+        <h2 style="margin-top:30px">跟老師一起離開的　是孩子的信任</h2>
+        <p>
+            當被問及高流動率的師資是否會對學生造成影響時，每位受訪者的回答都是「會啊」，斬釘截鐵，毫無疑問。宋慶瑋說：「國中小學童處於心智發展階段，老師的角色非常重要。」苗栗縣立外埔國小校長紀介五解釋，孩子在學習上需要建立穩定的師生關係，而信任是很重要的前提，若剛建立完良好的師生互動關係，老師又馬上面臨變動，對於學生會有很明顯的影響。
+        </p>
+
+        <p>
+            唐嘉聰也認為，國中小的學生都需要老師的引導，當學生好不容易有個互動良好、可以依賴的老師，結果開學發現他就不見了，新的老師從頭再來，並不一定會產生好的互動。曾任教於朗島國小的代理教師張恒睿指出，這所位於蘭嶼的學校老師流動率高，學生總會猜測哪位老師是不是將要離開，對於老師的信任感也會降低。
+        </p>
+        <p style="margin-bottom: 60px;">「最後確定要離開，我選擇好好跟他們說再見。」張恒睿表示，蘭嶼的孩子知道老師要走以後，就不太會鑽牛角尖。但真的要離開時，他的心裡也曾動搖，思考接手的會是怎樣的老師。離開蘭嶼後，張恒睿仍與學生保持聯絡，向他們分享好的學習資源，「想做好自己當老師的責任，但現況代理教師就是來來去去，也沒辦法。」
+        </p>
+
+        <div class="related-text">延伸閱讀</div>
+        <ul class="related-items">
+            <a href="http://www.unews.nccu.edu.tw/unews/%E4%BB%A3%E7%90%86%E6%95%99%E5%B8%AB2/" target="_blank">
+                <li class="related-item">
+                    <img src="chart03.jpg" alt="leading image of this article" />
+                    <div>【當老師不再是鐵飯碗 2】代理教師陷重重困境　燃燒熱忱何以為繼</div>
+                </li>
+            </a>
+            <a href="http://www.unews.nccu.edu.tw/unews/%E4%BB%A3%E7%90%86%E6%95%99%E5%B8%AB%E6%96%B03/" target="_blank">
+                <li class="related-item">
+                    <img src="photo02.JPG" alt="leading image of this article" />
+                    <div>【當老師不再是鐵飯碗 3】提升代理教師待遇　保障學生受教權</div>
+                </li>
+            </a>
+        </ul>
+    </article>
+
+    <footer>
+        <div class="flex-footer">
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">關於我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">聯絡我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">關於我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">聯絡我們</div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+        @media screen and (max-width: 767px) {
+            table.hidden-on-mobile {
+                display: none;
+            }
+            table.shown-on-mobile {
+                display: table;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            table.hidden-on-mobile {
+                display: table;
+                max-width: 770px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            table.shown-on-mobile {
+                display: none;
+            }
+        }
+    <footer>
+        <table class="shown-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於摳大</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">支持摳大</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡摳大</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">愛上摳大</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="hidden-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於摳大</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">支持摳大</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡摳大</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">愛上摳大</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </footer>
+-->
+
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184240-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121184240-1');
+</script>
+
+<!-- Hotjar Tracking Code for https://wenrongchang.github.io/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:923856,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 </html>
